@@ -1,0 +1,25 @@
+{
+  "name": "pro",
+  "version": "0.0.1",
+  "description": "",
+  "main": "1.js",
+  "keywords": [],
+  "author": "ChenZhen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KingNigel/test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KingNigel/test/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.14.0",
+    "body-parser":"^1.15.2",
+    "cookies":"^0.6.1",
+    "markdown":"^0.5.0",
+    "mongoose":"^4.5.7",
+    "swig":"^1.4.2"
+  }
+}

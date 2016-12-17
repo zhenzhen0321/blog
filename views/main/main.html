@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>论坛首页</title>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">   -->
+    <link rel="stylesheet/less" href="/public/css/base.less">
+    <link rel="stylesheet/less" href="/public/css/main.less">
+    <script src="/public/js/less.js"></script>
+    <script src="/public/js/jquery-2.2.0.js"></script>
+    <script src="/public/js/index.js"></script>
+</head>
+<body>
+       <div class="wrapper">
+           <div class="banner">
+               <img src="/public/images/banner01.jpg" alt="">
+           </div>
+           <div class="tab">
+               <ul>
+                   <li><a href="javascript:;" class="current">首页</a></li>
+                   <li><a href="javascript:;">css</a></li>
+                   <li><a href="javascript:;">html</a></li>
+                   <li><a href="javascript:;">java</a></li>
+                   <li><a href="javascript:;">php</a></li>
+                   <li><a href="javascript:;">c#</a></li>
+                   <li><a href="javascript:;">physon</a></li>
+                   <li><a href="javascript:;">express</a></li>
+               </ul>
+           </div>
+           <div class="main clearfix">
+               <div class="review">
+                   <ul>
+                       <li>
+                           <h3>symfon2</h3>
+                           <div class="review-remark">
+                               <span class="re-author">
+                                   作者
+                                   <i>admin</i>
+                               </span>
+                               <span class="re-time">
+                                   时间
+                                   <i>2017年7月19日</i>
+                               </span>
+                               <span class="re-read">
+                                   阅读
+                                   <i>231</i>
+                               </span>
+                               <span class="re-comment">
+                                   评论
+                                   <i>10</i>
+                               </span>
+                           </div>
+                           <p class="review-content">
+                               PHP框架-symfon2
+                           </p>
+                           <input type="button" value="阅读前文">
+                       </li>
+                       <li>
+                            <h3>symfon2</h3>
+                           <div class="review-remark">
+                               <span class="re-author">
+                                   作者
+                                   <i>admin</i>
+                               </span>
+                               <span class="re-time">
+                                   时间
+                                   <i>2017年7月19日</i>
+                               </span>
+                               <span class="re-read">
+                                   阅读
+                                   <i>231</i>
+                               </span>
+                               <span class="re-comment">
+                                   评论
+                                   <i>10</i>
+                               </span>
+                           </div>
+                           <p class="review-content">
+                               PHP框架-symfon2
+                           </p>
+                           <input type="button" value="阅读前文">
+                       </li>
+                       <li>
+                            <h3>symfon2</h3>
+                           <div class="review-remark">
+                               <span class="re-author">
+                                   作者
+                                   <i>admin</i>
+                               </span>
+                               <span class="re-time">
+                                   时间
+                                   <i>2017年7月19日</i>
+                               </span>
+                               <span class="re-read">
+                                   阅读
+                                   <i>231</i>
+                               </span>
+                               <span class="re-comment">
+                                   评论
+                                   <i>10</i>
+                               </span>
+                           </div>
+                       </li>
+                       <li>
+                            <h3>symfon2</h3>
+                           <div class="review-remark">
+                               <span class="re-author">
+                                   作者
+                                   <i>admin</i>
+                               </span>
+                               <span class="re-time">
+                                   时间
+                                   <i>2017年7月19日</i>
+                               </span>
+                               <span class="re-read">
+                                   阅读
+                                   <i>231</i>
+                               </span>
+                               <span class="re-comment">
+                                   评论
+                                   <i>10</i>
+                               </span>
+                           </div>
+                           <p class="review-content">
+                               PHP框架-symfon2
+                           </p>
+                           <input type="button" value="阅读前文">
+                       </li>
+                   </ul>
+               </div>
+               <div class="login">
+                   <ul>
+                       {% if userInfo.id %}
+                       <li>
+                           <h3>用户信息</h3>
+                            <p>{{userInfo.username}}</p>
+                            {% if userInfo.isAdmin %}
+                                <p>你好，欢迎光临为大博客</p> 
+                                <a href="javascript:;" id="admin">进入后台管理</a>
+                            {% else %}
+                                <p>你好，欢迎光临为大博客</p>
+                            {% endif %}
+                            
+                            <p><a href="javascript:;" id="logout">退出</a></p>
+                       </li>
+                       {% else %}
+                       <li id="loginBox" >
+                           <h3>登录</h3>
+                           <p>
+                               用户名:<input type="text" id="loginName">
+                           </p>
+                           <p>
+                               密&nbsp;码:<input type="password" id="loginPwd">
+                           </p>
+                           <input type="button" value="登录">
+                            <p class="colMessage"></p>
+                           <p class="textRight">还没有注册?<a href="javascript:;" class="colMint">马上注册</a></p>
+                       </li>
+                       <li id="registerBox" style="display: none">
+                           <h3>注册</h3>
+                           <p>
+                               用户名:<input type="text" name="username" id="username">
+                           </p>
+                           <p>
+                               密&nbsp;码:<input type="password" name="password" id="pwd">
+                           </p>
+                            <p>
+                               确&nbsp;认:
+                               <input type="password" id="repwd">
+                           </p>
+                           <input type="button" value="注册">
+                           <p class="textRight">已经注册成功<a href="javascript:;" class="colMint">马上登录</a></p>
+                           <p class="colMessage" id="colMessage"></p>
+                       </li>
+                       {% endif %}
+                   </ul>
+               </div>
+           </div>
+       </div>
+</body>
+</html>
