@@ -76,12 +76,12 @@ $(function(){
     });
 
     //进入管理员界面
-    $("#admin").on('click',function(req,res){
-        $.ajax({
-            type:'get',
-            url:'/admin'
-        });
-    });
+    // $("#admin").on('click',function(){
+    //     $.ajax({
+    //         type:'get',
+    //         url:'/admin'
+    //     });
+    // });
 
 
 });

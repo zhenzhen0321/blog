@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>论坛首页</title>
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">   -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>node andmin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet/less" href="/public/css/base.less">
     <link rel="stylesheet/less" href="/public/css/main.less">
     <script src="/public/js/less.js"></script>
@@ -11,20 +18,19 @@
     <script src="/public/js/index.js"></script>
 </head>
 <body>
-       <div class="wrapper">
-           <div class="banner">
-               <img src="/public/images/banner01.jpg" alt="">
+       <div class="container-fluid">
+           <div class="row">
+               <div class="col-lg-12">
+                   <img src="/public/images/banner01.jpg" alt="">
+               </div>
            </div>
-           <div class="tab">
-               <ul>
+           <div class="row tab">
+                <ul class="col-lg-12">
                    <li><a href="javascript:;" class="current">首页</a></li>
-                   <li><a href="javascript:;">css</a></li>
-                   <li><a href="javascript:;">html</a></li>
-                   <li><a href="javascript:;">java</a></li>
-                   <li><a href="javascript:;">php</a></li>
-                   <li><a href="javascript:;">c#</a></li>
-                   <li><a href="javascript:;">physon</a></li>
-                   <li><a href="javascript:;">express</a></li>
+                   {%for category in categories%}
+                        <li><a href="javascript:;">{{category.name}}</a></li>
+                   {% endfor %}
+                   
                </ul>
            </div>
            <div class="main clearfix">
@@ -136,7 +142,7 @@
                             <p>{{userInfo.username}}</p>
                             {% if userInfo.isAdmin %}
                                 <p>你好，欢迎光临为大博客</p> 
-                                <a href="javascript:;" id="admin">进入后台管理</a>
+                                <a href="/admin" id="admin">进入后台管理</a>
                             {% else %}
                                 <p>你好，欢迎光临为大博客</p>
                             {% endif %}
